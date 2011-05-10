@@ -26,10 +26,11 @@
   
   <!-- Properties -->
   <properties>
-    <jaxws.version>1.0.0.Beta1</jaxws.version>
+    <jaxws.version>1.0.0.Final</jaxws.version>
     <junit.version>4.8.1</junit.version>
     <cxf.version>2.3.0</cxf.version>
-    <servlet-api.version>1.0.0.Beta2</servlet-api.version>
+    <servlet-api.version>1.0.0.Final</servlet-api.version>
+    <jboss.httpserver.version>1.0.0.Beta1</jboss.httpserver.version>
   </properties>
 
   <!-- Dependencies -->
@@ -38,7 +39,12 @@
        <groupId>org.jboss.spec.javax.xml.ws</groupId>
        <artifactId>jboss-jaxws-api_2.2_spec</artifactId>
        <version>${jaxws.version}</version>
-    </dependency> 
+    </dependency>
+    <dependency>
+       <groupId>org.jboss.com.sun.httpserver</groupId>
+       <artifactId>httpserver</artifactId>
+       <version>${jboss.httpserver.version}</version>
+    </dependency>
   
     <!-- test dependencies -->
     <dependency>

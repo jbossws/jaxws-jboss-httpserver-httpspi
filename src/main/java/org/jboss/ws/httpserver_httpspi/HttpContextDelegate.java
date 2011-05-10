@@ -1,6 +1,6 @@
 /*
  * JBoss, Home of Professional Open Source.
- * Copyright 2010, Red Hat Middleware LLC, and individual contributors
+ * Copyright 2011, Red Hat Middleware LLC, and individual contributors
  * as indicated by the @author tags. See the copyright.txt file in the
  * distribution for a full listing of individual contributors.
  *
@@ -35,13 +35,12 @@ import javax.xml.ws.spi.http.HttpHandler;
  * @since 22-Aug-2010
  *
  */
-@SuppressWarnings("restriction")
 public class HttpContextDelegate extends HttpContext
 {
-   private com.sun.net.httpserver.HttpContext delegate;
+   private org.jboss.com.sun.net.httpserver.HttpContext delegate;
    private String path;
 
-   public HttpContextDelegate(com.sun.net.httpserver.HttpContext delegate, String path)
+   public HttpContextDelegate(org.jboss.com.sun.net.httpserver.HttpContext delegate, String path)
    {
       this.delegate = delegate;
       this.path = path;
@@ -70,9 +69,9 @@ public class HttpContextDelegate extends HttpContext
    @Override
    public void setHandler(HttpHandler handler)
    {
-      if (handler instanceof com.sun.net.httpserver.HttpHandler)
+      if (handler instanceof org.jboss.com.sun.net.httpserver.HttpHandler)
       {
-         delegate.setHandler((com.sun.net.httpserver.HttpHandler) handler);
+         delegate.setHandler((org.jboss.com.sun.net.httpserver.HttpHandler) handler);
       }
       else
       {

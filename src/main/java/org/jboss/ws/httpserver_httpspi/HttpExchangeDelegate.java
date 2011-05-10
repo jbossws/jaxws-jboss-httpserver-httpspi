@@ -1,6 +1,6 @@
 /*
  * JBoss, Home of Professional Open Source.
- * Copyright 2010, Red Hat Middleware LLC, and individual contributors
+ * Copyright 2011, Red Hat Middleware LLC, and individual contributors
  * as indicated by the @author tags. See the copyright.txt file in the
  * distribution for a full listing of individual contributors.
  *
@@ -34,8 +34,8 @@ import java.util.Set;
 import javax.xml.ws.spi.http.HttpContext;
 import javax.xml.ws.spi.http.HttpExchange;
 
-import com.sun.net.httpserver.HttpServer;
-import com.sun.net.httpserver.HttpsServer;
+import org.jboss.com.sun.net.httpserver.HttpServer;
+import org.jboss.com.sun.net.httpserver.HttpsServer;
 
 /**
  * A javax.xml.ws.spi.http.HttpExchange that delegates
@@ -45,15 +45,14 @@ import com.sun.net.httpserver.HttpsServer;
  * @since 22-Aug-2010
  *
  */
-@SuppressWarnings("restriction")
 public class HttpExchangeDelegate extends HttpExchange
 {
-   private com.sun.net.httpserver.HttpExchange delegate;
+   private org.jboss.com.sun.net.httpserver.HttpExchange delegate;
    private HttpContextDelegate contextDelegate;
    private OutputStream wrappeddOutputStream;
    private int status;
 
-   public HttpExchangeDelegate(com.sun.net.httpserver.HttpExchange delegate)
+   public HttpExchangeDelegate(org.jboss.com.sun.net.httpserver.HttpExchange delegate)
    {
       this.delegate = delegate;
    }

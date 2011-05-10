@@ -1,6 +1,6 @@
 /*
  * JBoss, Home of Professional Open Source.
- * Copyright 2010, Red Hat Middleware LLC, and individual contributors
+ * Copyright 2011, Red Hat Middleware LLC, and individual contributors
  * as indicated by the @author tags. See the copyright.txt file in the
  * distribution for a full listing of individual contributors.
  *
@@ -43,25 +43,24 @@ import org.junit.Test;
 
 /**
  * A JAXWS 2.2 Endoint.publish(HttpContext context) API test
- * using the JDK6 httpsever as underlying http container
+ * using the JBoss httpsever as underlying http container
  * 
  * @author alessio.soldano@jboss.com
  * @since 22-Aug-2010
  *
  */
-@SuppressWarnings("restriction")
 public class EndpointAPITest extends Assert
 {
 
    private static int currentPort = 9876;
 
-   private com.sun.net.httpserver.HttpServer server;
+   private org.jboss.com.sun.net.httpserver.HttpServer server;
 
    @Before
    public void setUp() throws IOException
    {
       currentPort++;
-      server = com.sun.net.httpserver.HttpServer.create(new InetSocketAddress(currentPort), 0);
+      server = org.jboss.com.sun.net.httpserver.HttpServer.create(new InetSocketAddress(currentPort), 0);
    }
 
    @After
