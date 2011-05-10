@@ -1,6 +1,6 @@
 /*
  * JBoss, Home of Professional Open Source.
- * Copyright 2010, Red Hat Middleware LLC, and individual contributors
+ * Copyright 2011, Red Hat Middleware LLC, and individual contributors
  * as indicated by the @author tags. See the copyright.txt file in the
  * distribution for a full listing of individual contributors.
  *
@@ -23,8 +23,8 @@ package org.jboss.ws.httpserver_httpspi;
 
 import java.io.IOException;
 
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
+import org.jboss.com.sun.net.httpserver.HttpExchange;
+import org.jboss.com.sun.net.httpserver.HttpHandler;
 
 /**
  * A com.sun.net.httpserver.HttpHandler delegating
@@ -34,7 +34,6 @@ import com.sun.net.httpserver.HttpHandler;
  * @sine 22-Aug-2010
  *
  */
-@SuppressWarnings("restriction")
 public class HttpHandlerDelegate implements HttpHandler {
 
    private javax.xml.ws.spi.http.HttpHandler delegate;
