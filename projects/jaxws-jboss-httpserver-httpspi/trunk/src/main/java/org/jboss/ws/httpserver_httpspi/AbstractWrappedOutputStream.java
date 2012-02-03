@@ -96,7 +96,11 @@ public abstract class AbstractWrappedOutputStream extends OutputStream {
 
    @Override
    public void flush() throws IOException {
-       if (written && wrappedStream != null) {
+       if (!written) {
+           onFirstWrite();
+	   written = true;
+       }
+       if (wrappedStream != null) {
            wrappedStream.flush();
        }
    }
