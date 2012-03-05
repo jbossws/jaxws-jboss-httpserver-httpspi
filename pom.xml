@@ -8,7 +8,7 @@
   <artifactId>jaxws-jboss-httpserver-httpspi</artifactId>
   <packaging>jar</packaging>
 
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.2-SNAPSHOT</version>
 
   <!-- Source Control Management -->
   <scm>
