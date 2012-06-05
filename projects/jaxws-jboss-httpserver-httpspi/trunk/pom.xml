@@ -28,7 +28,7 @@
   <properties>
     <jaxws.version>2.0.0.Final</jaxws.version>
     <junit.version>4.8.1</junit.version>
-    <cxf.version>2.5.2</cxf.version>
+    <cxf.version>2.6.1</cxf.version>
     <servlet-api.version>1.0.0.Final</servlet-api.version>
     <jboss.httpserver.version>1.0.0.Final</jboss.httpserver.version>
   </properties>
